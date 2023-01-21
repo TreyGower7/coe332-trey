@@ -1,3 +1,4 @@
+
 with open('/usr/share/dict/words', 'r') as f:
     words = f.read().splitlines()                # careful of memory usage
 
