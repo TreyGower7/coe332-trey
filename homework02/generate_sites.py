@@ -2,7 +2,7 @@ import random
 import json
 random.seed()
 
-def generate_sites() -> dict :
+def generate_sites() -> dict:
     
     """
     generate site will compute random integer site ids, assign their composition based off id then randomize lattitude and longitude
@@ -31,7 +31,7 @@ def generate_sites() -> dict :
     return ind_site
 
 
-sites = {"sites": [{}]}
+sites = {"sites": []}
 for x in range(5):
     sites["sites"].append(generate_sites())
 
