@@ -23,5 +23,38 @@ Then, you are able to run any of the various functions using paths.
 
 For Example:
         curl localhost:5000/epochs
-        or
+        returns all epochs in the data set (a big list!)
+	or
 	curl localhost:5000/epochs/<specific epoch you want from epoch data set>
+	{
+  	"EPOCH": "2023-061T12:00:00.000Z",
+  	"X": {
+    		"#text": "3578.8574821437401",
+    		"@units": "km"
+  	},
+  	"X_DOT": {
+    		"#text": "5.03904352218286",
+    		"@units": "km/s"
+  	},
+  	"Y": {
+    		"#text": "-5454.7252313410299",
+    		"@units": "km"
+  	},
+  	"Y_DOT": {
+    		"#text": "1.32725609415084",
+    		"@units": "km/s"
+  	},
+  	"Z": {
+    		"#text": "1908.4598652639199",
+   		 "@units": "km"
+  	},
+  	"Z_DOT": {
+    		"#text": "-5.6136727354188301",
+    		"@units": "km/s"
+  	}
+	}		
+	or
+	curl localhost:5000/epochs/2023-061T12:00:00.000Z/speed
+        [
+        7.659431437012692
+        ]   
