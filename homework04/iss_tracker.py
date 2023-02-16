@@ -81,7 +81,7 @@ def speed_epoch(epoch):
     y_dot = float(spec_epoch['Y_DOT']["#text"])
     x_dot = float(spec_epoch['X_DOT']["#text"])
     speed = math.sqrt(x_dot**2 + y_dot**2 + z_dot**2)
-    return [speed]
+    return {speed}
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
