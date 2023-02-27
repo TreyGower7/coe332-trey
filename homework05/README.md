@@ -26,7 +26,7 @@ then we run it
 ```sh  
 docker run -it --rm -p 5000:5000 tagower/iss_tracker:1.0
 ```
-*Now Refer To Correct Ports and Example Outputs Section*
+***Now Refer To Correct Ports and Example Outputs Section***
 
 Instructions on Use Building A New Docker Image
 -----------------------------
@@ -63,7 +63,7 @@ and to run the image:
 ```sh  
 docker run -it --rm -p 5000:5000 username/iss_tracker:1.0
 ```
-*Now Refer To Correct Ports and Example Outputs Section*
+***Now Refer To Correct Ports and Example Outputs Section***
 
 Correct Ports and Example Outputs
 -----------------------------
