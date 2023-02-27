@@ -18,21 +18,52 @@ In your linux environment run the command:
 ```sh  
 docker pull tagower/iss_tracker:1.0
 ```
-then
+then to ensure the image exists:
+```sh  
+docker images
+```
+then we run it
 ```sh  
 docker run -it --rm -p 5000:5000 tagower/iss_tracker:1.0
 ```
+*Now Refer To Correct Ports and Example Outputs Section*
 
 Instructions on Use Building A New Docker Image
 -----------------------------
-In your linux environment run the command:   
+In your linux environment run the command: 
 ```sh  
-docker pull tagower/iss_tracker:1.0
+wget https://github.com/TreyGower7/coe322-trey/blob/main/homework05/iss_tracker.py
 ```
-then
+then we need to create our docker build by creating a new file and writing some commands in.
 ```sh  
-docker run -it --rm -p 5000:5000 tagower/iss_tracker:1.0
+vi Dockerfile
 ```
+Next what commands to use:
+
+FROM python:3.8.10
+
+RUN pip install Flask==2.2.2
+RUN pip install xmltodict==0.13.0
+RUN pip install requests==2.22.0
+
+COPY iss_tracker.py /iss_tracker.py
+
+CMD ["python", "iss_tracker.py"]
+
+***To ensure it runs properly DO NOT change from Python version 3.8.10 or Flask 2.2.2 (unless you are editing the code to run with newer versions)***
+Now to build: 
+```sh  
+docker build -t username/iss_tracker:1.0 .
+```
+then to find your newly built image:
+```sh  
+docker images
+```
+and to run the image:
+```sh  
+docker run -it --rm -p 5000:5000 username/iss_tracker:1.0
+```
+*Now Refer To Correct Ports and Example Outputs Section*
 
 Correct Ports and Example Outputs
 -----------------------------
