@@ -44,6 +44,7 @@ Example Outputs:
 * For all paths usecurl localhost:5000/help
 
 	To Delete or Post Data from the iss trajectory:
+<<<<<<< HEAD
 ```sh
 curl -X POST <GreenBoxIP>:5000/post-data 
 ```	
@@ -54,6 +55,13 @@ curl -X DELETE <GreenBoxIP>:5000/delete-data
 Outputs a string verifying status of the data such as: Data Deleted
 
 Other examples:
+=======
+	
+	
+	*Output displays message verifying wether you posted or deleted.
+	
+	Other examples:
+>>>>>>> 6674362ca916167b6aa8f4d40d6cf935cd2f654c
 	curl localhost:5000/epochs
         returns all epochs in the data set (a big list!)
 	or
