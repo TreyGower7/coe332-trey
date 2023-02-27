@@ -52,16 +52,9 @@ curl -X POST <GreenBoxIP>:5000/post-data
 ```sh  
 curl -X DELETE <GreenBoxIP>:5000/delete-data
 ```
-Outputs a string verifying status of the data such as: Data Deleted
-
+Outputs a string verifying status of the data such as: Data Delete
+	
 Other examples:
-=======
-	
-	
-	*Output displays message verifying wether you posted or deleted.
-	
-	Other examples:
->>>>>>> 6674362ca916167b6aa8f4d40d6cf935cd2f654c
 	curl localhost:5000/epochs
         returns all epochs in the data set (a big list!)
 	or
