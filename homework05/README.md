@@ -40,15 +40,20 @@ Ensure when curling an image you use the second ip listed in green box (It could
 https://github.com/TreyGower7/coe322-trey/issues/1#issue-1600407155
 
 Example Outputs:
-	*For all paths usecurl localhost:5000/help
+
+* For all paths usecurl localhost:5000/help
 
 	To Delete or Post Data from the iss trajectory:
-	```sh  
-	curl -X POST <Greenboxip>:5000/post-data or  curl -X DELETE <Greenboxip>:5000/delete-data
-	```
-	*Output displays message verifying wether you posted or deleted.
-	
-	Other examples:
+```sh
+curl -X POST <GreenBoxIP>:5000/post-data 
+```	
+	or  
+```sh  
+curl -X DELETE <GreenBoxIP>:5000/delete-data
+```
+Outputs a string verifying status of the data such as: Data Deleted
+
+Other examples:
 	curl localhost:5000/epochs
         returns all epochs in the data set (a big list!)
 	or
