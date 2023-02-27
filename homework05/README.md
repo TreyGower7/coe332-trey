@@ -44,8 +44,8 @@ Example Outputs:
 
 	To Delete or Post Data from the iss trajectory:
 	```sh  
-	curl -X POST <Greenboxip>:5000/post-data or  curl -X DELETE <Greenboxip>:5000/delete-data
-	```
+	curl -X POST <Greenboxip>:5000/post-data or  curl -X DELETE <Greenboxip>:5000/delete-data```
+	
 	*Output displays message verifying wether you posted or deleted.
 	
 	Other examples:
