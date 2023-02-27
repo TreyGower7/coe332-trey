@@ -37,8 +37,7 @@ docker run -it --rm -p 5000:5000 tagower/iss_tracker:1.0
 Correct Ports and Example Outputs
 -----------------------------
 Ensure when curling an image you use the second ip listed in green box (It could be different for you).
-https://github.com/TreyGower7/coe322-trey/issues/1#issue-1600407155
-
+/Users/treygower/Desktop/Screenshot\ 2023-02-26\ at\ 9.38.31\ PM.png 
 Example Outputs:
 
 * For all paths usecurl localhost:5000/help
