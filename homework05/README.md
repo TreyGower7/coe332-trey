@@ -49,7 +49,7 @@ Example Outputs:
 ```sh
 curl -X POST <GreenBoxIP>:5000/post-data 
 ```	
-	or  
+or  
 ```sh  
 curl -X DELETE <GreenBoxIP>:5000/delete-data
 ```
@@ -59,7 +59,9 @@ Other examples:
 	curl localhost:5000/epochs
         returns all epochs in the data set (a big list!)
 	or
-	curl localhost:5000/epochs/<specific epoch you want from epoch data set>
+```sh 
+curl localhost:5000/epochs/<specific epoch you want from epoch data set>
+```
 	{
   	"EPOCH": "2023-061T12:00:00.000Z",
   	"X": {
@@ -87,8 +89,13 @@ Other examples:
     		"@units": "km/s"
   	}
 	}		
-	or
-	curl localhost:5000/epochs/2023-061T12:00:00.000Z/speed
-        [
+
+or
+
+```sh 	
+curl localhost:5000/epochs/2023-061T12:00:00.000Z/speed
+```
+    
+	 [
         7.659431437012692
         ]   
