@@ -3,6 +3,7 @@
 folder contents / project objective
 -----------------------------
 Folder contains 1 .py script iss_tracker.py. The objective is to feed in the data, query it and return more interesting data we can do calculations with.
+<img width="842" alt="Screenshot 2023-02-26 at 9 38 31 PM" src="https://user-images.githubusercontent.com/70235944/221581571-f313db39-6111-4ec8-ad5b-ed4c9d2e7fcb.png">
 
 Data Access
 -----------------------------
@@ -37,7 +38,7 @@ docker run -it --rm -p 5000:5000 tagower/iss_tracker:1.0
 Correct Ports and Example Outputs
 -----------------------------
 Ensure when curling an image you use the second ip listed in green box (It could be different for you).
-/Users/treygower/Desktop/Screenshot\ 2023-02-26\ at\ 9.38.31\ PM.png 
+
 Example Outputs:
 
 * For all paths usecurl localhost:5000/help
