@@ -16,7 +16,7 @@ Instructions on Use Using Existing Docker Image
 -----------------------------
 In your linux environment run the command:   
 ```sh  
-docker pull tagower/iss_tracker:1.0
+docker pull tagower/iss_tracker:hw05
 ```
 then to ensure the image exists:
 ```sh  
@@ -24,7 +24,7 @@ docker images
 ```
 then we run it
 ```sh  
-docker run -it --rm -p 5000:5000 tagower/iss_tracker:1.0
+docker run -it --rm -p 5000:5000 tagower/iss_tracker:hw05
 ```
 ***Now Refer To Correct Ports and Example Outputs Section***
 
@@ -53,7 +53,7 @@ CMD ["python", "iss_tracker.py"]
 ***To ensure it runs properly DO NOT change from Python version 3.8.10 or Flask 2.2.2 (unless you are editing the code to run with newer versions)***
 Now to build: 
 ```sh  
-docker build -t username/iss_tracker:1.0 .
+docker build -t username/iss_tracker:hw05 .
 ```
 then to find your newly built image:
 ```sh  
@@ -61,7 +61,7 @@ docker images
 ```
 and to run the image:
 ```sh  
-docker run -it --rm -p 5000:5000 username/iss_tracker:1.0
+docker run -it --rm -p 5000:5000 username/iss_tracker:hw05 .
 ```
 ***Now Refer To Correct Ports and Example Outputs Section***
 
