@@ -61,7 +61,7 @@ docker images
 ```
 and to run the image:
 ```sh  
-docker run -it --rm -p 5000:5000 username/iss_tracker:hw05 .
+docker run -it --rm -p 5000:5000 username/iss_tracker:hw05 
 ```
 ***Now Refer To Correct Ports and Example Outputs Section***
 
