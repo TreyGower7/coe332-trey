@@ -76,7 +76,6 @@ Example Outputs:
 * For all paths usecurl localhost:5000/help
 
 	To Delete or Post Data from the iss trajectory:
-<<<<<<< HEAD
 ```sh
 curl -X POST <GreenBoxIP>:5000/post-data 
 ```	
@@ -130,3 +129,6 @@ curl localhost:5000/epochs/2023-061T12:00:00.000Z/speed
 	 [
         7.659431437012692
         ]   
+Data and Unit Information
+-----------------------------
+All data being reported in each epoch has units time, km, km/s respectively. Where the epoch is time and date X,Y,Z is in km and X_DOT,Y_DOT, and Z_DOT are all in km/s.
