@@ -86,8 +86,6 @@ def get_epochs() -> list:
     """
     if iss_data == {}:
         return data_status()
-    
-    L = len(iss_data['ndm']['oem']['body']['segment']['data']['stateVector'])
     epoch_data = []
     for x in range(L):
         epoch_data.append(iss_data['ndm']['oem']['body']['segment']['data']['stateVector'][x]['EPOCH'])
@@ -123,7 +121,7 @@ def vec_epochs(epoch) -> list:
 
     spec_epoch = []
     epoch_data = get_epochs()
-    for x in range(len(epoch_data)):
+    for x in range(L):
         if epoch == str(epoch_data[x]['EPOCH']):
             spec_epoch = epoch_data[x]
             return spec_epoch
@@ -173,8 +171,9 @@ def post_data() -> str:
     iss_data = get_data()
     return 'Data Posted'
 
-#global trajectory data variable
+#global trajectory data variable and length
 iss_data = get_data()
+L = len(iss_data['ndm']['oem']['body']['segment']['data']['stateVector'])
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
