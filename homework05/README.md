@@ -132,4 +132,5 @@ curl localhost:5000/epochs/2023-061T12:00:00.000Z/speed
 Data and Unit Information
 -----------------------------
 All data being reported in each epoch has units time, km, km/s respectively. Where the epoch is time and date X,Y,Z is in km and X_DOT,Y_DOT, and Z_DOT are all in km/s. 
+
 ***When curling the speed function speed is returned in km/s as well.***
