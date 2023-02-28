@@ -120,8 +120,8 @@ def vec_epochs(epoch) -> list:
         return data_status()
 
     spec_epoch = []
-    epoch_data = get_epochs()
-    for x in range(L):
+    epoch_data = iss_data['ndm']['oem']['body']['segment']['data']['stateVector']
+    for x in range(len(epoch_data)):
         if epoch == str(epoch_data[x]['EPOCH']):
             spec_epoch = epoch_data[x]
             return spec_epoch
