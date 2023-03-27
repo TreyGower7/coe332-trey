@@ -19,13 +19,9 @@ The goal of this gene data mini project is to use python requests to store gene 
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
+    <li><a href="#about-the-project">About The Project</a>
+    <li><a href="#built-with">Built With</a></li>
     <li><a href="#getting-started">Getting Started</a>
-    </ul><a href="#prerequisites">Prerequisites</a></li>
-    </ul><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#Paths/Routes">Paths & Routes</a></li>
     <li><a href="#What the data says">What the data says</a></li>
