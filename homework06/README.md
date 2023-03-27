@@ -33,10 +33,9 @@ The goal of this gene data mini project is to use python requests to store gene 
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#Paths/Routes">Roadmap</a></li>
+    <li><a href="#What the data says">Contact</a></li>
+    <li><a href="#Contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -95,6 +94,15 @@ This is an example of how to list things you need to use the software and how to
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- ROADMAP -->
+## Paths/Routes
+
+- [ ] /data (POST's (loads), GET's (returns), or DELETE's the data from HGNC from the redis database)
+- [ ] /genes (Returns a json formated list named hgnc_ids of all gene identifiers in the data set)
+- [ ] /genes/<hgnc_id> (Gets the gene data from a specific gene given an identifier key)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -102,18 +110,6 @@ This is an example of how to list things you need to use the software and how to
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [hello] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
