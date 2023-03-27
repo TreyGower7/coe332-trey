@@ -44,7 +44,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 
 ### Built With
-![919853](https://user-images.githubusercontent.com/70235944/227825855-d09cf82b-834f-45f1-8867-fb4a8979454b.png)
+  <img src=https://user-images.githubusercontent.com/70235944/227821572-ac1783f5-d1cc-42f2-a38c-007b76707e18.jpg alt="Logo" width="80" height="80">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
