@@ -33,8 +33,8 @@ The goal of this gene data mini project is to use python requests to store gene 
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#Paths/Routes">Roadmap</a></li>
-    <li><a href="#What the data says">Contact</a></li>
+    <li><a href="#Paths/Routes">Paths & Routes</a></li>
+    <li><a href="#What the data says">What the data says</a></li>
     <li><a href="#Contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
