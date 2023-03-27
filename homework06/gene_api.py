@@ -16,6 +16,7 @@ def get_redis_client():
         the redis client with host redis-db in order to interact and get from the docker-compose.yml file
     """
     return redis.Redis(host='redis-db', port=6379,db=0)
+rd = get_redis_client()
 
 def data_status() -> dict:
     """
@@ -43,8 +44,6 @@ def data():
         response = requests.get(url)
         if response.status_code == 200:
             data = json.loads(response.text)
-            global rd
-            rd = get_redis_client()
             rd.set('gene_data', json.dumps(data))
             global dflag
             dflag = False
@@ -83,8 +82,8 @@ def genes() -> list:
         hgnc_ids.append(json_data['response']['docs'][x]['hgnc_id'])
     return hgnc_ids
 
-@app.route('/genes/<hgnc_id>', methods=['GET'])
-def genes_hgnc(hgnc_id) -> dict:
+@app.route('/genes/<string:hgnc_id>', methods=['GET'])
+def genes_hgnc(hgnc_id: str) -> dict:
     """
     Gets the gene data from a specific gene given and identifier key
     Args:
@@ -96,9 +95,9 @@ def genes_hgnc(hgnc_id) -> dict:
         return data_status()
     try:
         json_data = data()
-        for hid in json_data['response']['docs']:
-            if hid == hgnc_id:
-                return json_data['response']['docs'][x]
+        for h_id in json_data['response']['docs']:
+            if h_id['hgnc_id'] == hgnc_id:
+                return [h_id]
 
     except ValueError as e:
         return f'invalid hgnc_id input {hgnc_id} with error {e}'
