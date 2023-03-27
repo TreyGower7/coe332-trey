@@ -17,7 +17,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="<img width="346" alt="Screenshot 2023-03-24 at 11 23 54 AM" src="https://user-images.githubusercontent.com/70235944/227821519-07f161f5-068e-41c8-b0b9-43f29de84fc4.png">" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Say it Aint Genes (Gene Nomenclature)</h3>
