@@ -88,9 +88,9 @@ This is an example of how to list things you need to use the software and how to
 <!-- ROADMAP -->
 ## Paths/Routes
 
-- [ ] /data (POST's (loads), GET's (returns), or DELETE's the data from HGNC from the redis database)
-- [ ] /genes (Returns a json formated list named hgnc_ids of all gene identifiers in the data set)
-- [ ] /genes/<hgnc_id> (Gets the gene data from a specific gene given an identifier key)
+- /data (POST's (loads), GET's (returns), or DELETE's the data from HGNC from the redis database)
+- /genes (Returns a json formated list named hgnc_ids of all gene identifiers in the data set)
+- /genes/<hgnc_id> (Gets the gene data from a specific gene given an identifier key)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
