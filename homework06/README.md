@@ -153,7 +153,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Trey Gower - goweryert@gmail.com
 
-Project Link: [https://github.com/TreyGower7/coe332-trey/homework06]
+Project Link: [https://github.com/TreyGower7/coe332-trey/tree/main/homework06](Coe332 Gene Project)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
