@@ -17,7 +17,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="<https://github.com/TreyGower7/coe332-trey/issues/2#issue-1641216180>" alt="Logo" width="80" height="80">
+    <img src=https://github.com/TreyGower7/coe332-trey/issues/2#issue-1641216180 alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Say it Aint Genes (Gene Nomenclature)</h3>
