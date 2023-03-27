@@ -17,8 +17,8 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src=https://github.com/TreyGower7/coe332-trey/issues/2#issue-1641216180 alt="Logo" width="80" height="80">
-  </a>
+  <img src=https://github.com/TreyGower7/coe332-trey/issues/2#issue-1641216180 alt="Logo" width="80" height="80">
+  </a>](https://github.com/TreyGower7/coe332-trey/issues/2#issue-1641216180)
 
 <h3 align="center">Say it Aint Genes (Gene Nomenclature)</h3>
 
@@ -79,14 +79,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
