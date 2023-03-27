@@ -15,7 +15,7 @@ def get_redis_client():
     Returns:
         the redis client with host redis-db in order to interact and get from the docker-compose.yml file
     """
-    return redis.Redis(host='127.0.0.1', port=6379,db=0)
+    return redis.Redis(host='redis-db', port=6379,db=0)
 
 def data_status() -> dict:
     """
