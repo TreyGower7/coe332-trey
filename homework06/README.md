@@ -65,7 +65,7 @@ Running this script is extremely easy using the docker files provided to you in 
 ### Pulling a docker image
 1. docker pull request
    ```sh
-   docker pull tagower/gene_data:hw06   
+   docker pull tagower/gene_api:hw06   
    ```
 2. Run Redis and Flask on ports 6379 and 5000 respectively
    ```sh
@@ -75,7 +75,7 @@ Running this script is extremely easy using the docker files provided to you in 
 ### Building a docker image
 1. Build the image using included docker file
 ```sh  
-docker build -t <username>/gene_data:<yourtag> .
+docker build -t <username>/gene_api:<yourtag> .
 ```
 2. Check image was created
 ```sh  
