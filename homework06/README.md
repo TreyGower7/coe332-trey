@@ -33,11 +33,8 @@ The goal of this gene data mini project is to use python requests to store gene 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Gene Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -55,32 +52,39 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Running this script is extremely easy using the docker files provided to you in this repository. Breaking it into two parts, we can either pull an already created image or build our own image.
 
 ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
+***Docker must be installed on your machine in order to run the files provided in this repo***
+1. Since most use Ubuntu here is a link to get docker up and running on your machine using Ubuntu: https://docs.docker.com/engine/install/ubuntu/
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/TreyGower7/coe332-trey/tree/main/homework06
    ```
-3. Install NPM packages
+    
+### Pulling a docker image
+1. docker pull request
    ```sh
-   npm install
+   docker pull tagower/gene_data:hw06   
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+2. Run Redis and Flask on ports 6379 and 5000 respectively
+   ```sh
+   docker-compose up -d
    ```
+    
+### Building a docker image
+1. Build the image using included docker file
+```sh  
+docker build -t <username>/gene_data:<yourtag> .
+```
+2. Check image was created
+```sh  
+docker images
+```
+3. Run your new image
+```sh  
+docker-compose up
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,9 +102,6 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,8 +121,6 @@ Project Link: [https://github.com/TreyGower7/coe332-trey/tree/main/homework06]
 ## Acknowledgments
 
 * [https://www.genenames.org/download/archive/]()
-* []()
-* []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
