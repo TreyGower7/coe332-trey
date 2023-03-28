@@ -129,12 +129,12 @@ docker-compose up
     ```sh
     curl localhost:5000/genes
     ```
-      Output: <img width="627" alt="Screenshot 2023-03-27 at 9 23 48 PM" src="https://user-images.githubusercontent.com/70235944/228111676-a901004f-2ee2-4f89-a981-d294d412620f.png">
+      Output: <img width="500" alt="Screenshot 2023-03-27 at 9 23 48 PM" src="https://user-images.githubusercontent.com/70235944/228111676-a901004f-2ee2-4f89-a981-d294d412620f.png">
 5. Get all data pertaining to a specific hgnc id
     ```sh
     curl localhost:5000/genes/hgnc_id
     ```
-      Output: <img width="627" alt="Screenshot 2023-03-27 at 9 24 13 PM" src="https://user-images.githubusercontent.com/70235944/228111861-7970c198-8c78-4428-bf78-5dfb36abbcc7.png">
+      Output: <img width="500" alt="Screenshot 2023-03-27 at 9 24 13 PM" src="https://user-images.githubusercontent.com/70235944/228111861-7970c198-8c78-4428-bf78-5dfb36abbcc7.png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
