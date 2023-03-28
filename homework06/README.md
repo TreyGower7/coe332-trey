@@ -140,10 +140,10 @@ docker-compose up
     
 <!-- What the data says -->
 ## What the Important data says
-*locus_group = A group name for a set of related locus types as defined by the HGNC (e.g. non-coding RNA
-*locus_type = The locus type as defined by the HGNC (e.g. RNA, transfer)
-*location = Cytogenetic location of the gene (e.g. 2q34)
-*gene_family = Name given to a gene family or group
+* locus_group = A group name for a set of related locus types as defined by the HGNC (e.g. non-coding RNA
+* locus_type = The locus type as defined by the HGNC (e.g. RNA, transfer)
+* location = Cytogenetic location of the gene (e.g. 2q34)
+* gene_family = Name given to a gene family or group
     
 ***Most other data is a form of id type for specific identification within data bases***
 
