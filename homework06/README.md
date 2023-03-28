@@ -144,6 +144,7 @@ docker-compose up
 * [locus_type] (The locus type as defined by the HGNC (e.g. RNA, transfer))
 * [location] (Cytogenetic location of the gene (e.g. 2q34))
 * [gene_family] (Name given to a gene family or group)
+    
 ***Most other data is a form of id type for specific identification within data bases***
 
 
