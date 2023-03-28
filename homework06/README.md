@@ -39,11 +39,13 @@ The Gene Project was mainly about learning to use redis with big sets of data in
 ### The Files In This Repo
     
 `gene_api.py`
+the python script contains and executes the `Flask`, `redis`, and python `requests` libraries functions. The script retrieves the data from the web at https://www.genenames.org/download/archive/, then can be displayed with different paths that send http requests.
     
 `docker-compose.yml`
+saves the user (you) from having to type in tricky commands to run the docker image. Instead it wraps the information for the docker image into one file and runs it with a simple command.
     
 `Dockerfile`
-Used to capture the docker image, the file specifies the Python version, and installs any libraries used in the python script to run the application. For the `gene_api.py` script the Dockerfile installs: `redis`, `requests`, `Flask`, and `yaml`.
+is used to capture the docker image, the file specifies the Python version, and installs any libraries used in the python script to run the application. For the `gene_api.py` script the Dockerfile installs: `redis`, `requests`, `Flask`, and `yaml`.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
