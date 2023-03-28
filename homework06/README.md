@@ -78,6 +78,8 @@ Running this script is extremely easy using the docker files provided to you in 
    ```sh
    docker-compose up -d
    ```
+    Ouput: <img width="627" alt="Screenshot 2023-03-27 at 8 16 20 PM" src="https://user-images.githubusercontent.com/70235944/228101604-7d796aae-8c44-420f-9362-88d95fbae69d.png">
+
     
 ### Building a docker image
 1. Build the image using included docker file
