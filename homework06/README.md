@@ -57,10 +57,15 @@ Running this script is extremely easy using the docker files provided to you in 
 ### Prerequisites
 ***Docker must be installed on your machine in order to run the files provided in this repo***
 1. Since most use Ubuntu here is a link to get docker up and running on your machine using Ubuntu: https://docs.docker.com/engine/install/ubuntu/
+
 2. Clone the repo
    ```sh
    git clone https://github.com/TreyGower7/coe332-trey/tree/main/homework06
    ```
+3. Make a data directory to store your data with redis
+    ```sh
+    mkdir data
+    ```
     
 ### Pulling a docker image
 1. docker pull request
