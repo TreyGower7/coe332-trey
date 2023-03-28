@@ -37,11 +37,11 @@ The goal of this gene data mini project is to use python requests to store gene 
 The Gene Project was mainly about learning to use redis with big sets of data integrated with Flask. The big data used is from The Human Genome Organization (HUGO) and the commitee within HUGO, being HGNC, “approves a unique and meaningful name for every gene.” This data is imported with python requests then Flask apps excute http requests to get the data and returns the data.
     
 ### The Files In This Repo
-    * `docker-compose.yml`
+`docker-compose.yml`
     
-    * `Dockerfile`
-    
-    * `gene_api.py`
+`Dockerfile`
+
+`gene_api.py`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
