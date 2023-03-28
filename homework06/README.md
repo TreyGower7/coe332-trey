@@ -34,6 +34,18 @@ The goal of this gene data mini project is to use python requests to store gene 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Gene Project
+The Gene Project was mainly about learning to use redis with big sets of data integrated with Flask. The big data used is from The Human Genome Organization (HUGO) and the commitee within HUGO, being HGNC, “approves a unique and meaningful name for every gene.” This data is imported with python requests then Flask apps excute http requests to get the data and returns the data.
+    
+### The Files In This Repo
+    
+`gene_api.py`
+the python script contains and executes the `Flask`, `redis`, and python `requests` libraries functions. The script retrieves the data from the web at https://www.genenames.org/download/archive/, then can be displayed with different paths that send http requests.
+    
+`docker-compose.yml`
+saves the user (you) from having to type in tricky commands to run the docker image. Instead it wraps the information for the docker image into one file and runs it with a simple command.
+    
+`Dockerfile`
+is used to capture the docker image, the file specifies the Python version, and installs any libraries used in the python script to run the application. For the `gene_api.py` script the Dockerfile installs: `redis`, `requests`, `Flask`, and `yaml`.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -57,20 +69,29 @@ Running this script is extremely easy using the docker files provided to you in 
 ### Prerequisites
 ***Docker must be installed on your machine in order to run the files provided in this repo***
 1. Since most use Ubuntu here is a link to get docker up and running on your machine using Ubuntu: https://docs.docker.com/engine/install/ubuntu/
+
 2. Clone the repo
    ```sh
    git clone https://github.com/TreyGower7/coe332-trey/tree/main/homework06
    ```
+3. Make a data directory to store your data with redis
+    ```sh
+    mkdir data
+    ```
     
 ### Pulling a docker image
 1. docker pull request
    ```sh
    docker pull tagower/gene_api:hw06   
    ```
+    Output: <img width="627" alt="Screenshot 2023-03-27 at 8 14 47 PM" src="https://user-images.githubusercontent.com/70235944/228101377-198115c8-3448-4efc-8094-e9f5476b130b.png">
+
 2. Run Redis and Flask on ports 6379 and 5000 respectively
    ```sh
    docker-compose up -d
    ```
+    Ouput: <img width="627" alt="Screenshot 2023-03-27 at 8 16 20 PM" src="https://user-images.githubusercontent.com/70235944/228101604-7d796aae-8c44-420f-9362-88d95fbae69d.png">
+
     
 ### Building a docker image
 1. Build the image using included docker file
@@ -101,12 +122,44 @@ docker-compose up
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+1. Post the data to the redis database
+    ```sh
+    curl -X POST localhost:5000/data
+    ```
+      Output: Gene Data Posted
+2. Get the data from redis in json format
+    ```sh
+    curl localhost:5000/data
+    ```
+      Output: ***Outputs same as curl localhost:5000/genes/hgnc_id except returns all ids***
+3. Delete the data from the redis database
+    ```sh
+    curl -X DELETE localhost:5000/data
+    ```
+      Output: Gene Data Deleted
+4. Get all hgnc_ids 
+    ```sh
+    curl localhost:5000/genes
+    ```
+      Output: <img width="500" alt="Screenshot 2023-03-27 at 9 23 48 PM" src="https://user-images.githubusercontent.com/70235944/228111676-a901004f-2ee2-4f89-a981-d294d412620f.png">
+5. Get all data pertaining to a specific hgnc id
+    ```sh
+    curl localhost:5000/genes/hgnc_id
+    ```
+      Output: <img width="500" alt="Screenshot 2023-03-27 at 9 24 13 PM" src="https://user-images.githubusercontent.com/70235944/228111861-7970c198-8c78-4428-bf78-5dfb36abbcc7.png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
 <!-- What the data says -->
-## What the data says
+## What the Important data says
+* hgnc_id = HGNC ID. A unique ID created by the HGNC for every approved symbol. 
+* locus_group = A group name for a set of related locus types as defined by the HGNC (e.g. non-coding RNA)
+* locus_type = The locus type as defined by the HGNC (e.g. RNA, transfer)
+* location = Cytogenetic location of the gene (e.g. 2q34)
+* gene_family = Name given to a gene family or group
+    
+***Most other data is a form of id type for specific identification within data bases***
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -117,7 +170,7 @@ docker-compose up
 
 Trey Gower - goweryert@gmail.com
 
-Project Link: [https://github.com/TreyGower7/coe332-trey/tree/main/homework06]
+Project Link: https://github.com/TreyGower7/coe332-trey/tree/main/homework06
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +179,7 @@ Project Link: [https://github.com/TreyGower7/coe332-trey/tree/main/homework06]
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [https://www.genenames.org/download/archive/]()
+* The Human Genome Organization: [https://www.genenames.org/download/archive/]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
