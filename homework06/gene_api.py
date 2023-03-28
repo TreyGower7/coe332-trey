@@ -4,8 +4,6 @@ import json
 import requests
 
 app = Flask(__name__)
-# Variable dflag checks for data in the redis data base. If no data it is set to True.
-dflag = True
 
 def get_redis_client():
     """
@@ -17,17 +15,6 @@ def get_redis_client():
     """
     return redis.Redis(host='redis-db', port=6379,db=0)
 rd = get_redis_client()
-
-def data_status() -> dict:
-    """
-    Gets data and checks status of deletion
-    Args:
-        None
-    Returns:
-        gene_data (dict) dictionary containing data from HGNC
-    """
-    if dflag ==True:
-        return 'Data was deleted (use path /data with POST method to fetch it)'
 
 @app.route('/data', methods=['GET', 'POST', 'DELETE'])
 def data():
@@ -45,23 +32,18 @@ def data():
         if response.status_code == 200:
             data = json.loads(response.text)
             rd.set('gene_data', json.dumps(data))
-            global dflag
-            dflag = False
             return 'Gene Data Posted'
         else:
             return 'Data failed to retrieve'
 
 
     if request.method == 'GET':
-        if dflag == True:
-            return data_status()
-        return json.loads(rd.get('gene_data').decode('utf-8'))
-    
+        try:
+            return json.loads(rd.get('gene_data').decode('utf-8'))
+        except KeyError:
+            return 'Data not found (use path /data with POST method to fetch it)'
     if request.method == 'DELETE':   
-        if dflag == True:
-            return data_status()
         rd.delete('gene_data')
-        dflag = True
         return 'Gene Data deleted'
 
 @app.route('/genes', methods=['GET'])
@@ -73,14 +55,15 @@ def genes() -> list:
     Returns:
         Returns a json formated list named hgnc_ids of all gene identifiers in the data set
     """
-    if dflag == True:
-        return data_status()
-    hgnc_ids = []
-    json_data = data()
+    try:
+        hgnc_ids = []
+        json_data = data()
 
-    for x in range(len(json_data['response']['docs'])):
-        hgnc_ids.append(json_data['response']['docs'][x]['hgnc_id'])
-    return hgnc_ids
+        for x in range(len(json_data['response']['docs'])):
+            hgnc_ids.append(json_data['response']['docs'][x]['hgnc_id'])
+        return hgnc_ids
+    except TypeError:
+       return 'Data not found (use path /data with POST method to fetch it)'
 
 @app.route('/genes/<string:hgnc_id>', methods=['GET'])
 def genes_hgnc(hgnc_id: str) -> dict:
@@ -91,8 +74,6 @@ def genes_hgnc(hgnc_id: str) -> dict:
     Returns:
         a dictionary (hgnc_data) containing all data pertaining to a specifi gene
     """
-    if dflag == True:
-        return data_status()
     try:
         json_data = data()
         for h_id in json_data['response']['docs']:
@@ -101,6 +82,8 @@ def genes_hgnc(hgnc_id: str) -> dict:
 
     except ValueError as e:
         return f'invalid hgnc_id input {hgnc_id} with error {e}'
+    except TypeError:
+        return 'Data not found (use path /data with POST method to fetch it)'
 
 def get_config() -> dict:
     """
