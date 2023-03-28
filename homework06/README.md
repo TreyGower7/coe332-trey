@@ -92,6 +92,10 @@ Running this script is extremely easy using the docker files provided to you in 
    ```
     Ouput: <img width="627" alt="Screenshot 2023-03-27 at 8 16 20 PM" src="https://user-images.githubusercontent.com/70235944/228101604-7d796aae-8c44-420f-9362-88d95fbae69d.png">
 
+3. Run href="#Paths/Routes">Paths & Routes</a></li> or stop containers
+  ```sh
+  docker-compose down
+  ```
     
 ### Building a docker image
 1. Build the image using included docker file
@@ -106,6 +110,10 @@ docker images
 ```sh  
 docker-compose up
 ```
+4. Run href="#Paths/Routes">Paths & Routes</a></li> or stop containers
+  ```sh
+  docker-compose down
+  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
