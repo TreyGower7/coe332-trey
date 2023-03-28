@@ -72,6 +72,8 @@ Running this script is extremely easy using the docker files provided to you in 
    ```sh
    docker pull tagower/gene_api:hw06   
    ```
+    Output: <img width="627" alt="Screenshot 2023-03-27 at 8 14 47 PM" src="https://user-images.githubusercontent.com/70235944/228101377-198115c8-3448-4efc-8094-e9f5476b130b.png">
+
 2. Run Redis and Flask on ports 6379 and 5000 respectively
    ```sh
    docker-compose up -d
