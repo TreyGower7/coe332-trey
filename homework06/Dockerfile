@@ -7,4 +7,4 @@ RUN pip install PyYAML==6.0
 
 COPY gene_api.py /gene_api.py
 
-CMD ["python", "~/coe322-repo/homework06/gene_api.py"]
+CMD ["python", "gene_api.py"]
