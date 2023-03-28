@@ -110,7 +110,31 @@ docker-compose up
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+1. Post the data to the redis database
+    ```sh
+    curl -X POST localhost:5000/data
+    ```
+      Output: Gene Data Posted
+2. Get the data from redis in json format
+    ```sh
+    curl localhost:5000/data
+    ```
+      Output: ***Outputs same as curl localhost:5000/genes/hgnc_id except returns all ids***
+3. Delete the data from the redis database
+    ```sh
+    curl -X DELETE localhost:5000/data
+    ```
+      Output: Gene Data Deleted
+4. Get all hgnc_ids 
+    ```sh
+    curl localhost:5000/genes
+    ```
+      Output: <img width="627" alt="Screenshot 2023-03-27 at 9 23 48 PM" src="https://user-images.githubusercontent.com/70235944/228111676-a901004f-2ee2-4f89-a981-d294d412620f.png">
+5. Get all data pertaining to a specific hgnc id
+    ```sh
+    curl localhost:5000/genes/hgnc_id
+    ```
+      Output: <img width="627" alt="Screenshot 2023-03-27 at 9 24 13 PM" src="https://user-images.githubusercontent.com/70235944/228111861-7970c198-8c78-4428-bf78-5dfb36abbcc7.png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
