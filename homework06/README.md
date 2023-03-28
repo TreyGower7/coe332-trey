@@ -179,7 +179,7 @@ Project Link: https://github.com/TreyGower7/coe332-trey/tree/main/homework06
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* The Human Genome Organization:[https://www.genenames.org/download/archive/]()
+* The Human Genome Organization: [https://www.genenames.org/download/archive/]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
