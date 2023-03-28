@@ -39,8 +39,9 @@ def data():
 
     if request.method == 'GET':
         try:
-            return json.loads(rd.get('gene_data').decode('utf-8'))
-        except KeyError:
+            json_data = json.loads(rd.get('gene_data'))
+            return json_data
+        except:
             return 'Data not found (use path /data with POST method to fetch it)'
     if request.method == 'DELETE':   
         rd.delete('gene_data')
@@ -62,7 +63,7 @@ def genes() -> list:
         for x in range(len(json_data['response']['docs'])):
             hgnc_ids.append(json_data['response']['docs'][x]['hgnc_id'])
         return hgnc_ids
-    except TypeError:
+    except:
        return 'Data not found (use path /data with POST method to fetch it)'
 
 @app.route('/genes/<string:hgnc_id>', methods=['GET'])
@@ -72,18 +73,18 @@ def genes_hgnc(hgnc_id: str) -> dict:
     Args:
         hgnc_id - an identifier for which gene to pull data from
     Returns:
-        a dictionary (hgnc_data) containing all data pertaining to a specifi gene
+        a dictionary (hgnc_data) containing all data pertaining to a specific gene
     """
     try:
+        
         json_data = data()
         for h_id in json_data['response']['docs']:
             if h_id['hgnc_id'] == hgnc_id:
                 return [h_id]
 
-    except ValueError as e:
-        return f'invalid hgnc_id input {hgnc_id} with error {e}'
+        raise TypeError
     except TypeError:
-        return 'Data not found (use path /data with POST method to fetch it)'
+        return f'invalid hgnc_id input or no data found with error'
 
 def get_config() -> dict:
     """
