@@ -16,7 +16,7 @@ services:
             dockerfile: ./Dockerfile
         depends_on:
             - redis-db
-        image: tagower/gene_api:hw06
+        image: tagower/gene_api:hw07
         ports:
             - 5000:5000
         volumes:
