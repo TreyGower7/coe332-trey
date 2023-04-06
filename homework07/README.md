@@ -161,13 +161,13 @@ docker-compose up
   
   <!-- Kubernetes -->
 ### Kubernetes Deployment
-***IMPORTANT: if building your own image it must be a docker image, which you can create following the steps in the prerequisites section. Also note, you must be in a kubernetes cluster for these steps.***
+***IMPORTANT: if building your own image it must be a docker image, which you can create following the steps in the 'Building a docker image' section. Also note, you must be in a kubernetes cluster for these steps.***
 
 ***In the github repository you can find 5 .yml files beginning with tagower-test to run the docker image.***
 
-## Using The Provided Image
+# Using The Provided Image
 
-## Building Your Own Image and Adapting The yml
+# Building Your Own Image and Adapting The yml
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
