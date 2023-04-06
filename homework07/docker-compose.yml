@@ -11,6 +11,8 @@ services:
         user: "1000:1000"
         command: redis-server
     flask-app:
+        environment:
+          - REDIS_HOST= "gene_apihw07.py"
         build:
             context: ./
             dockerfile: ./Dockerfile

@@ -23,7 +23,7 @@
            image: tagower/gene_api:hw07
            env:
            - name: REDIS_HOST
-             value: "gene_apihw07.py"
+             value: "tagower-test-redis-service"
            volumeMounts:
            - name: tagower-test-data
              mountPath: "/data"
