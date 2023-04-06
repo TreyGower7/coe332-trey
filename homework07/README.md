@@ -22,8 +22,9 @@ The goal of this gene data mini project is to use python requests to store gene 
     <li><a href="#about-the-project">About The Project</a>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#getting-started">Getting Started</a>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#Paths & Routes">Paths & Routes</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#Kubernetes Deployment">Kubernetes Deployment</a>
     <li><a href="#What the data says">What the data says</a></li>
     <li><a href="#Contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -155,6 +156,13 @@ docker-compose up
     curl localhost:5000/genes/hgnc_id
     ```
       Output: <img width="500" alt="Screenshot 2023-03-27 at 9 24 13 PM" src="https://user-images.githubusercontent.com/70235944/228111861-7970c198-8c78-4428-bf78-5dfb36abbcc7.png">
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+  
+  <!-- Kubernetes -->
+## Kubernetes Deployment
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
