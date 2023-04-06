@@ -195,6 +195,21 @@ docker-compose up
   ```
 <img width="529" alt="Screenshot 2023-04-05 at 8 48 12 PM" src="https://user-images.githubusercontent.com/70235944/230252049-f0a0d87e-c2cb-49d0-88b1-9251d8bbab89.png">
 
+4. Get the Cluster ip for the flask service and use it to run curl commands
+  ```sh
+  kubectl get services
+  ```
+  
+  <img width="390" alt="Screenshot 2023-04-05 at 8 52 30 PM" src="https://user-images.githubusercontent.com/70235944/230252605-08abd1b5-0ee4-4eb4-95ec-eccbdaccfac6.png">
+
+5. Exec into your python debugger
+  ```sh
+  kubectl exec -it <your_python_debugger> -- /bin/bash
+  ```
+6. Run the curl commands provided in the 'Paths & Routes' or 'Usage Section' using your cluster ip
+  ```sh
+  curl <cluster_ip>:5000/<a_path>
+  ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
 <!-- What the data says -->
