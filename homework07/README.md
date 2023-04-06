@@ -177,8 +177,9 @@ docker-compose up
 ### Running The Deployments
 ***For both Using and Building sections we need to make sure the files are up and running*** 
 
-  1. Find your python debugger in kubernetes and ensure its running
-  <img width="529" alt="Screenshot 2023-04-05 at 8 40 33 PM" src="https://user-images.githubusercontent.com/70235944/230251539-ea530e8a-510e-4c7e-a8e0-56e6a0b034aa.png">
+1. Find your python debugger in kubernetes and ensure its running
+<img width="529" alt="Screenshot 2023-04-05 at 8 40 33 PM" src="https://user-images.githubusercontent.com/70235944/230251539-ea530e8a-510e-4c7e-a8e0-56e6a0b034aa.png">
+
 2. To run the other containers taken from this github repo
   ```sh
   kubectl apply -f tagower-test-flask-service.yml
@@ -187,11 +188,12 @@ docker-compose up
   kubectl apply -f tagower-test-redis-deployment.yml
   kubectl apply -f tagower-test-pvc.yml
   ```
+
 3. Check that they are running 
   ```sh
   kubectl get pods
   ```
-  <img width="529" alt="Screenshot 2023-04-05 at 8 48 12 PM" src="https://user-images.githubusercontent.com/70235944/230252049-f0a0d87e-c2cb-49d0-88b1-9251d8bbab89.png">
+<img width="529" alt="Screenshot 2023-04-05 at 8 48 12 PM" src="https://user-images.githubusercontent.com/70235944/230252049-f0a0d87e-c2cb-49d0-88b1-9251d8bbab89.png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
