@@ -14,7 +14,7 @@ def get_redis_client():
     Returns:
         the redis client with host redis-db in order to interact and get from the docker-compose.yml file
     """
-    redis_host = os.environ.get("REDIS_HOST")
+    redis_host = os.environ.get("REDIS_HOST","redis-db")
     return redis.Redis(host= redis_host, port=6379,db=0,decode_responses=True)
 rd = get_redis_client()
 
