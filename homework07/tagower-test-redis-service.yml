@@ -1,0 +1,18 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tagower-test-redis-service
+  labels:
+    username: tagower
+    env: test
+spec:
+  type: ClusterIP
+  selector:
+    app: tagower-test-redis
+    username: tagower
+    env: test
+  ports:
+  - name: tagower-redis-port
+    port: 6379
+    targetPort: 6379

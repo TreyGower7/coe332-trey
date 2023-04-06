@@ -1,0 +1,30 @@
+---
+ apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: tagower-test-redis-deployment
+   labels:
+     username: tagower
+     env: test
+ spec:
+   replicas: 1
+   selector:
+     matchLabels:
+       app: tagower-test-redis
+   template:
+     metadata:
+       labels:
+         app: tagower-test-redis
+         username: tagower
+         env: test
+     spec:
+       containers:
+         - name: tagower-redis
+           image: redis:7
+           volumeMounts:
+           - name: tagower-test-data
+             mountPath: "/data"
+       volumes:
+       - name: tagower-test-data
+         persistentVolumeClaim:
+           claimName: tagower-test-data
