@@ -13,8 +13,15 @@ def get_redis_client():
     Returns:
         the redis client with host redis-db in order to interact and get from the docker-compose.yml file
     """
-    return redis.Redis(host='redis-db', port=6379,db=0)
+    return redis.Redis(host= 'redis-db', port=6379,db=0)
 rd = get_redis_client()
+
+@app.route('/plot', methods=['GET'])
+def plot():
+
+    file_bytes = open('mysinewave.png', 'rb').read()
+    rd.set('plot', file_bytes)
+    return rd.get('plot')
 
 @app.route('/data', methods=['GET', 'POST', 'DELETE'])
 def data():
