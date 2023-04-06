@@ -161,7 +161,7 @@ docker-compose up
   
   <!-- Kubernetes -->
 ## Kubernetes Deployment
-***IMPORTANT: if building your own image it must be a docker image, which you can create following the steps in the 'Building a docker image' section. Also note, you must be in a kubernetes cluster for these steps***
+***IMPORTANT: You must be in a kubernetes cluster for these steps***
 
 ***In the github repository you can find 5 .yml files beginning with tagower-test to run the docker image***
 
@@ -173,7 +173,14 @@ docker-compose up
 2. Refer below to 'Running Deployments' Section
   
 ### Building Your Own Image and Adapting The yml
+***if building your own image it must be a docker image, which you can create following the steps in the 'Building a docker image' section***
 
+1. Adapt the flask deployment file by changing this to the name of your image <your_username>/<image>:<image_tag>
+<img width="401" alt="Screenshot 2023-04-06 at 12 17 00 AM" src="https://user-images.githubusercontent.com/70235944/230278377-85d42405-58f2-422a-a1f1-d76b70fa83d3.png">
+
+2. Everything else remains the same. Now refer to 'Running The Deployments' section below
+  
+  
 ### Running The Deployments
 ***For both Using and Building sections we need to make sure the files are up and running*** 
 
