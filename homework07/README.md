@@ -83,7 +83,7 @@ Running this script is extremely easy using the docker files provided to you in 
 ## Pulling a docker image
 1. docker pull request
    ```sh
-   docker pull tagower/gene_api:hw06   
+   docker pull tagower/gene_api:hw07   
    ```
     Output: <img width="627" alt="Screenshot 2023-03-27 at 8 14 47 PM" src="https://user-images.githubusercontent.com/70235944/228101377-198115c8-3448-4efc-8094-e9f5476b130b.png">
 
@@ -161,14 +161,37 @@ docker-compose up
   
   <!-- Kubernetes -->
 ## Kubernetes Deployment
-***IMPORTANT: if building your own image it must be a docker image, which you can create following the steps in the 'Building a docker image' section. Also note, you must be in a kubernetes cluster for these steps.***
+***IMPORTANT: if building your own image it must be a docker image, which you can create following the steps in the 'Building a docker image' section. Also note, you must be in a kubernetes cluster for these steps***
 
-***In the github repository you can find 5 .yml files beginning with tagower-test to run the docker image.***
+***In the github repository you can find 5 .yml files beginning with tagower-test to run the docker image***
 
 ### Using The Provided Image
-
+1. docker pull request
+  ```sh
+   docker pull tagower/gene_api:hw07  
+   ```
+2. Refer below to 'Running Deployments' Section
+  
 ### Building Your Own Image and Adapting The yml
 
+### Running The Deployments
+***For both Using and Building sections we need to make sure the files are up and running*** 
+
+  1. Find your python debugger in kubernetes and ensure its running
+  <img width="529" alt="Screenshot 2023-04-05 at 8 40 33 PM" src="https://user-images.githubusercontent.com/70235944/230251539-ea530e8a-510e-4c7e-a8e0-56e6a0b034aa.png">
+2. To run the other containers taken from this github repo
+  ```sh
+  kubectl apply -f tagower-test-flask-service.yml
+  kubectl apply -f tagower-test-flask-deployment.yml
+  kubectl apply -f tagower-test-redis-service.yml
+  kubectl apply -f tagower-test-redis-deployment.yml
+  kubectl apply -f tagower-test-pvc.yml
+  ```
+3. Check that they are running 
+  ```sh
+  kubectl get pods
+  ```
+  <img width="529" alt="Screenshot 2023-04-05 at 8 48 12 PM" src="https://user-images.githubusercontent.com/70235944/230252049-f0a0d87e-c2cb-49d0-88b1-9251d8bbab89.png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
