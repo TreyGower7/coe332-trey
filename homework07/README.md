@@ -49,6 +49,7 @@ saves the user (you) from having to type in tricky commands to run the docker im
 is used to capture the docker image, the file specifies the Python version, and installs any libraries used in the python script to run the application. For the `gene_api.py` script the Dockerfile installs: `redis`, `requests`, `Flask`, and `yaml`.
 
 `Kubernetes Files:`
+    
     `tagower-test-flask-service.yml` - Used to run the flask cluster (Runs all pods associated with the ip)
     
   `tagower-test-flask-deployment.yml` - Provides declartive updates for flask pods
