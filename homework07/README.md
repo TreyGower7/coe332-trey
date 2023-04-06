@@ -50,7 +50,7 @@ is used to capture the docker image, the file specifies the Python version, and 
 
 `Kubernetes Files:`
     
-    `tagower-test-flask-service.yml` - Used to run the flask cluster (Runs all pods associated with the ip)
+  `tagower-test-flask-service.yml` - Used to run the flask cluster (Runs all pods associated with the ip)
     
   `tagower-test-flask-deployment.yml` - Provides declartive updates for flask pods
     
