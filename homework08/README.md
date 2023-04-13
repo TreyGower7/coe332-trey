@@ -86,7 +86,7 @@ Running this script is extremely easy using the docker files provided to you in 
 
 2. Clone the repo
    ```sh
-   git clone https://github.com/TreyGower7/AsteroidDataProject.git
+   git clone https://github.com/TreyGower7/coe332-trey/tree/main/homework08
    ```
 3. Make a data directory to store your data with redis
     ```sh
@@ -96,7 +96,7 @@ Running this script is extremely easy using the docker files provided to you in 
 ## Pulling a docker image
 1. docker pull request
    ```sh
-   docker pull tagower/asteroid_stats:final   
+   docker pull tagower/asteroid_stats:hw08  
    ```
     Output: <img width="627" alt="Screenshot 2023-03-27 at 8 14 47 PM" src="https://user-images.githubusercontent.com/70235944/228101377-198115c8-3448-4efc-8094-e9f5476b130b.png">
 
@@ -181,7 +181,7 @@ docker-compose up
 ### Using The Provided Image
 1. docker pull request
   ```sh
-   docker pull tagower/asteroid_stats:final 
+   docker pull tagower/asteroid_stats:hw08
    ```
 2. Refer below to 'Running Deployments' Section
   
